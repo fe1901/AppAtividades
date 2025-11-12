@@ -31,6 +31,7 @@ class App(ctk.CTk):
         self.overrideredirect(True)
         self.resizable(False, False)
 
+
         #funções
         self.offset_x = 0
         self.offset_y = 0
@@ -110,8 +111,8 @@ class App(ctk.CTk):
                             self.msg_confir.overrideredirect(True)
 
                             self.titulo_3 = ctk.CTkFrame(self.msg_confir, fg_color="#474300", corner_radius=0,height=10)
-                            self.titulo_label_3 = ctk.CTkLabel(self.titulo_3, text="Confirmação",text_color="#ffffff", font=(self.fonte, 13))
-                            self.titulo_btn_3 = ctk.CTkButton(self.titulo_3, text="X", width=20, height=10,fg_color="#474300", text_color="#ffffff",command=self.msg_confir.destroy)
+                            self.titulo_label_3 = ctk.CTkLabel(self.titulo_3, text="Confirmação",text_color="#ffffff", font=("Press Start 2P", 7))
+                            self.titulo_btn_3 = ctk.CTkButton(self.titulo_3, text="X",font=("Press Start 2P", 7), width=20, height=10,fg_color="#474300", text_color="#ffffff",command=self.msg_confir.destroy)
 
                             self.titulo_3.bind("<Button-1>", start_conf)
                             self.titulo_3.bind("<B1-Motion>", move_conf)
@@ -120,8 +121,8 @@ class App(ctk.CTk):
                             self.titulo_label_3.pack(side="left", padx=70, pady=5)
                             self.titulo_btn_3.pack(side="right", padx=5, pady=5)
 
-                            self.msg = ctk.CTkLabel(self.msg_confir, font=(self.fonte, 17), text_color="#000000",text="Adição feita")
-                            self.destroy = ctk.CTkButton(self.msg_confir, text="Fechar", width=50, height=30,text_color="#000000",fg_color="#F2DE00", border_width=1, border_color="#000000",command=self.msg_confir.destroy,)
+                            self.msg = ctk.CTkLabel(self.msg_confir, font=("Press Start 2P", 13), text_color="#000000",text="Adição feita")
+                            self.destroy = ctk.CTkButton(self.msg_confir, text="Fechar",font=("Press Start 2P", 10), width=50, height=30,text_color="#000000",fg_color="#F2DE00",corner_radius=0, border_width=2, border_color="#000000",command=self.msg_confir.destroy,)
 
                             self.msg.grid(row=2,column=0, padx=10, pady=10)
                             self.destroy.grid(row=3,column=0, padx=10, pady=10)
@@ -142,23 +143,23 @@ class App(ctk.CTk):
                 self.adic.resizable(False, False)
 
                 self.titulo_4 = ctk.CTkFrame(self.adic, fg_color="#474300", corner_radius=0, height=10)
-                self.titulo_label_4 = ctk.CTkLabel(self.titulo_4, text="Adição de atividade", text_color="#ffffff", font=(self.fonte, 13))
-                self.titulo_btn_4 = ctk.CTkButton(self.titulo_4, text="X", width=20, height=10, fg_color="#474300",text_color="#ffffff", command=self.adic.destroy)
+                self.titulo_label_4 = ctk.CTkLabel(self.titulo_4, text="Adição de atividade", text_color="#ffffff", font=("Press Start 2P", 9))
+                self.titulo_btn_4 = ctk.CTkButton(self.titulo_4, font=("Press Start 2P", 9), text="X", width=20, height=10, fg_color="#474300",text_color="#ffffff", command=self.adic.destroy)
 
                 self.titulo_4.grid(row=1, column=1, sticky="new")
                 self.titulo_label_4.pack(side="left", padx=70, pady=5)
                 self.titulo_btn_4.pack(side="right", padx=5, pady=5)
 
-                self.label_nome = ctk.CTkLabel(self.adic, font=(self.fonte, 10), text_color="#000000",text="Coloque o nome:")
-                self.entry_nome = ctk.CTkEntry(self.adic, font=(self.fonte, 10),fg_color="#F2DE00" ,text_color="#000000", width=150, height=30)
+                self.label_nome = ctk.CTkLabel(self.adic, font=("Press Start 2P", 9), text_color="#000000",text="Coloque o nome:")
+                self.entry_nome = ctk.CTkEntry(self.adic, font=("Press Start 2P", 9),fg_color="#F2DE00" ,text_color="#000000", width=150, height=30,corner_radius=0,border_width=2, border_color="#000000")
 
-                self.label_horario = ctk.CTkLabel(self.adic, font=(self.fonte, 10), text_color="#000000",text="Coloque a quantia do tempo:")
-                self.entry_horario = ctk.CTkEntry(self.adic, font=(self.fonte, 10),fg_color="#F2DE00" ,text_color="#000000", width=150, height=30)
+                self.label_horario = ctk.CTkLabel(self.adic, font=("Press Start 2P", 9), text_color="#000000",text="Coloque a quantia do tempo:")
+                self.entry_horario = ctk.CTkEntry(self.adic, font=("Press Start 2P", 9),fg_color="#F2DE00" ,text_color="#000000", width=150, height=30,corner_radius=0,border_width=2, border_color="#000000")
 
-                self.label_descricao = ctk.CTkLabel(self.adic, font=(self.fonte, 10), text_color="#000000",text="Coloque a descrição:")
-                self.entry_desc = ctk.CTkEntry(self.adic, font=(self.fonte, 10),fg_color="#F2DE00", text_color="#000000",width=150, height=30)
+                self.label_descricao = ctk.CTkLabel(self.adic, font=("Press Start 2P", 9), text_color="#000000",text="Coloque a descrição:")
+                self.entry_desc = ctk.CTkEntry(self.adic, font=("Press Start 2P", 9),fg_color="#F2DE00",corner_radius=0,border_width=2, border_color="#000000", text_color="#000000",width=150, height=30)
 
-                self.enviar = ctk.CTkButton(self.adic, width=100, height=30, text="Enviar",fg_color="#F2DE00", text_color="#000000", border_width=1,border_color="#000000", command=lambda: salvar())
+                self.enviar = ctk.CTkButton(self.adic, width=100, height=30, text="Enviar",font=("Press Start 2P", 10),fg_color="#F2DE00", text_color="#000000", border_width=2,corner_radius=0,border_color="#000000", command=lambda: salvar())
                 self.enviar.grid(row=8, column=1, padx=10, pady=10)
 
                 self.label_nome.grid(row=2, column=1, padx=10, pady=0)
@@ -191,11 +192,11 @@ class App(ctk.CTk):
 
             #titulo
             self.titulo_2 = ctk.CTkFrame(self.tabela, fg_color="#474300", corner_radius=0, height=10)
-            self.titulo_label_2 = ctk.CTkLabel(self.titulo_2, text="Atividades feitas", text_color="#ffffff",font=(self.fonte, 13))
-            self.titulo_btn_2 = ctk.CTkButton(self.titulo_2, text="X", width=20, height=10, fg_color="#474300",text_color="#ffffff", command=self.tabela.destroy)
-            self.titulo_min_2 = ctk.CTkButton(self.titulo_2, text="-", font=(self.fonte, 28), width=20, height=10,fg_color="#474300", text_color="#ffffff", command=minimizar_2)
+            self.titulo_label_2 = ctk.CTkLabel(self.titulo_2, text="Atividades feitas",font=("Press Start 2P", 9), text_color="#ffffff")
+            self.titulo_btn_2 = ctk.CTkButton(self.titulo_2, text="X",font=("Press Start 2P", 9), width=20, height=10, fg_color="#474300",text_color="#ffffff", command=self.tabela.destroy)
+            self.titulo_min_2 = ctk.CTkButton(self.titulo_2, text="-", font=("Press Start 2P", 11), width=20, height=10,fg_color="#474300", text_color="#ffffff", command=minimizar_2)
 
-            self.titulo_min_2.place(x=340, y=0)
+            self.titulo_min_2.place(x=340, y=10)
             self.titulo_2.grid(row=1, column=0, sticky="new")
             self.titulo_label_2.pack(side="left", padx=70, pady=5)
             self.titulo_btn_2.pack(side="right", padx=5, pady=5)
@@ -204,16 +205,16 @@ class App(ctk.CTk):
             self.titulo_2.bind("<B1-Motion>", move_list)
 
             #Tabela e btns
-            self.tabela_list = ctk.CTkTextbox(self.tabela, width=350, height=150, font=(self.fonte, 10),text_color="#000000", fg_color="#F2DE00", border_width=1 ,border_color="#000000")
+            self.tabela_list = ctk.CTkTextbox(self.tabela, width=350, height=150, font=("Press Start 2P", 8),text_color="#000000", fg_color="#F2DE00",corner_radius=0 ,border_width=2 ,border_color="#000000")
 
-            self.destroy_tabela = ctk.CTkButton(self.tabela, width= 50, height= 30, text="<-",text_color="#000000", fg_color="#F2DE00",border_width=1, border_color="#000000", command=self.tabela.destroy)
-            self.add_tabela = ctk.CTkButton(self.tabela, width= 50, height= 30, text="+",text_color="#000000", fg_color="#F2DE00",border_width=1, border_color="#000000", command=add)
-            self.edit_tabela = ctk.CTkButton(self.tabela, width=50, height=30, text="e", text_color="#000000", fg_color="#F2DE00", border_width=1, border_color="#000000")
+            self.destroy_tabela = ctk.CTkButton(self.tabela, width= 50, height= 30, text="<-",font=("Press Start 2P", 10),text_color="#000000", fg_color="#F2DE00",corner_radius=0 ,border_width=2, border_color="#000000", command=self.tabela.destroy)
+            self.add_tabela = ctk.CTkButton(self.tabela, width= 50, height= 30, text="+",font=("Press Start 2P", 10),text_color="#000000", fg_color="#F2DE00",corner_radius=0 ,border_width=2, border_color="#000000", command=add)
+            self.edit_tabela = ctk.CTkButton(self.tabela, width=50, height=30, text="e",font=("Press Start 2P", 10), text_color="#000000", fg_color="#F2DE00",corner_radius=0 , border_width=2, border_color="#000000")
 
             self.tabela_list.grid(row=2, column=0, padx=30, pady=30)
 
             self.destroy_tabela.grid(row=3, column=0, padx=10, pady=10, sticky="w")
-            self.edit_tabela.grid(row=3, column=0,padx=10, pady=10, sticky="s")
+            self.edit_tabela.grid(row=3, column=0,padx=10, pady=(20,0), sticky="n")
             self.add_tabela.grid(row=3, column=0, padx=10, pady=10, sticky="e")
 
             db.execute('SELECT * FROM lista')
@@ -240,41 +241,39 @@ class App(ctk.CTk):
                 self.geometry("400x32")
                 self._minimizado = True
 
-        #fonte
 
-        self.fonte = ctk.CTkFont(family="Pixelify Sans", size=16, weight="normal")
 
         #titulo
         self.titulo = ctk.CTkFrame(self, fg_color="#474300", corner_radius= 0, height= 10 )
-        self.titulo_label = ctk.CTkLabel(self.titulo,text="Diario de atividades", text_color="#ffffff", font=(self.fonte, 13) )
-        self.titulo_btn = ctk.CTkButton(self.titulo,text="X",width=20, height=10, fg_color="#474300", text_color="#ffffff", command=self.destroy)
-        self.titulo_min = ctk.CTkButton(self.titulo,text="-",font=(self.fonte, 28),width=20, height=10, fg_color="#474300", text_color="#ffffff", command=minimizar)
+        self.titulo_label = ctk.CTkLabel(self.titulo,text="Diario de atividades", text_color="#ffffff", font=("Press Start 2P", 9) )
+        self.titulo_btn = ctk.CTkButton(self.titulo,text="X",font=("Press Start 2P", 9),width=20, height=10, fg_color="#474300", text_color="#ffffff", command=self.destroy)
+        self.titulo_min = ctk.CTkButton(self.titulo,text="_",font=("Press Start 2P", 11),width=20, height=10, fg_color="#474300", text_color="#ffffff", command=minimizar)
 
 
 
         self.titulo.grid(row=1, column=1, sticky="new")
         self.titulo_label.pack(side="left", padx=70, pady=5)
-        self.titulo_min.place(x= 340, y=0)
+        self.titulo_min.place(x= 340, y=10)
         self.titulo_btn.pack(side="right", padx=5, pady=5)
 
         self.titulo.bind("<Button-1>", start)
         self.titulo.bind("<B1-Motion>", move)
 
         #frame de mostrar os dias
-        self.dias = ctk.CTkFrame(self, fg_color="#F2DE00", corner_radius= 10, height= 30, width= 40, border_width = 1, border_color= "#000000")
-        self.dias_cont = ctk.CTkLabel(self.dias, text="001", text_color="#000000", font=(self.fonte , 14), height= 30, width= 40)
-        self.to_do = ctk.CTkLabel(self, text="TO DO", text_color="#000000", font=(self.fonte, 20), height= 30, width= 60)
+        self.dias = ctk.CTkFrame(self, fg_color="#F2DE00", corner_radius= 0, height= 30, width= 40, border_width = 2, border_color= "#000000")
+        self.dias_cont = ctk.CTkLabel(self.dias, text="001", text_color="#000000", font=("Press Start 2P" , 13), height= 30, width= 40)
+        self.to_do = ctk.CTkLabel(self, text="TO DO", text_color="#000000", font=("Press Start 2P", 15), height= 30, width= 60)
 
         self.dias.grid(row=1, column=1, padx= 20, pady=50, sticky="e")
         self.dias_cont.pack(side="top", padx=5, pady=5)
         self.to_do.grid(row=1, column=1, padx= 10, pady=30, sticky="w")
 
         #Frase
-        self.frase = ctk.CTkLabel(self, text="Hoje vc vai conseguir fazer aquele APP!!!", text_color="#000000", font=(self.fonte, 20),width=200, wraplength=200)
+        self.frase = ctk.CTkLabel(self, text="Hoje vc vai conseguir fazer aquele APP!!!", text_color="#000000", font=("Press Start 2P", 15),width=200, wraplength=200)
         self.frase.place(x=100 , y=130 )
 
         #Btn para tabela
-        self.btn_tabela = ctk.CTkButton(self, text="Atividades", width=100, height=15,border_width=1, border_color="#000000", fg_color="#F2DE00", text_color="#000000", command=tabela)
+        self.btn_tabela = ctk.CTkButton(self, text="Atividades",font=("Press Start 2P", 15), width=180, height=30,corner_radius=0,border_width=2, border_color="#000000", fg_color="#F2DE00", text_color="#000000", command=tabela)
         self.btn_tabela.grid(row=3, column=1, padx=5, pady=5, sticky="s")
 
 
